@@ -7,15 +7,19 @@ if cont == "yes" or cont == "y":
     dice = random.randint(1,6)
     print(dice)
     
-# check if there are enough elements
+# check if there are enough elements and assign random numbers to the list of dice
+import random
 length = False
 test_list = []
 
 while length == False:
     if len(test_list) < 5:
-        test_list.append(1)
+        i = random.randint(1,6)
+        test_list.append(i)
     elif len(test_list) == 5:
         length = True
+
+print(test_list)
 
 print(test_list)
     
