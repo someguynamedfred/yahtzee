@@ -7,8 +7,17 @@ if cont == "yes" or cont == "y":
     dice = random.randint(1,6)
     print(dice)
     
-#check if there are enough elements
+# check if there are enough elements
+length = False
+test_list = []
 
+while length == False:
+    if len(test_list) < 5:
+        test_list.append(1)
+    elif len(test_list) == 5:
+        length = True
+
+print(test_list)
     
 #make a scoring system
 #if the kept dice equal a certain list of integers, then a certain score is awarded
