@@ -14,6 +14,27 @@ while length == False:
         length = True
 
 print(test_list)
+
+#how to append a list of dice rolls that are randomly generated and it looks nice
+import random
+
+n = 5
+
+dice_rolls=[]
+
+while n > 0:
+    y = random.randint(1,6)
+    dice_rolls.append(y)
+    n -= 1
+
+dice_letters = ["A", "B", "C", "D", "E"]
+
+dice_number = 0
+
+print("Dice Rolls\n--------")
+for n in dice_rolls:
+    print(" " + str(dice_letters[dice_number]) + "  |  " + str(dice_rolls[dice_number]))
+    dice_number +=1
     
 #make a scoring system
 #if the kept dice equal a certain list of integers, then a certain score is awarded
