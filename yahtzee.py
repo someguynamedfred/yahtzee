@@ -15,6 +15,18 @@ while length == False:
 
 print(test_list)
 
+#comprehension to create a list of dice BUT ALSO to add to a list of dice that has already been determined
+#lets try a random list of dice
+import random 
+my_dice = [ random.randint(1,6) for n in range(1,6) ]
+print(my_dice)
+
+#random list of dice when a couple dice are already known
+dice1 = [ 2, 4, 1 ]
+dice2 = [ random.randint(1,6) for n in range(1, (6 - int(len(dice1)))) ]
+dice1 = dice1 + dice2
+print(dice1)
+
 #how to append a list of dice rolls that are randomly generated and it looks nice
 import random
 
