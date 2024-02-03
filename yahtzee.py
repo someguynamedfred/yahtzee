@@ -15,6 +15,16 @@ while length == False:
 
 print(test_list)
 
+#use a dictionary to hold the numbers on the dice
+import random
+random_rolls = {}
+dice_number = ["A", "B", "C", "D", "E"]
+for n in dice_number:
+    random_rolls[n] = random.randint(1,6)
+print(random_rolls)
+for n, roll in random_rolls.items():
+    print("Dice {} shows {}".format(n, roll))
+
 #comprehension to create a list of dice BUT ALSO to add to a list of dice that has already been determined
 #lets try a random list of dice
 import random 
