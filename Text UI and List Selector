@@ -1,0 +1,30 @@
+#list of variables
+list = ["A", "B", "C", "D", "E"]
+numbers = [1, 2, 3, 4, 5]
+keep_list = []
+ 
+# function that prints available options in a nice list
+def print_available_options():
+    for x in range(len(numbers)):
+        print("{} | {}".format(list[x], numbers[x]))
+ 
+# this calls a function, not commands to print
+print_available_options()
+ 
+choice = input("Which element do you want to keep? ")
+choice = choice.upper()
+ 
+# this sets the index of the chosen LETTER as a variable
+to_pop = list.index(str(choice))
+ 
+# this adds the chosen NUMBER to the list of numbers to keep
+keep_list.append(numbers[to_pop])
+print("This should print a list of the numbers you selected.")
+print("You have chosen to keep: {}".format(keep_list))
+ 
+# this removes the element from the list
+numbers.pop(int(to_pop))
+ 
+# this calls the list of options again
+print("\nAfter collecting that dice, you have the following available.")
+print_available_options()
